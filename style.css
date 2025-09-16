@@ -1,5 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
-
 * {
   margin: 0;
   padding: 0;
@@ -10,31 +9,34 @@
   font-family: "Poppins", sans-serif;
 }
 
+
 :root {
   --bg-color: black;
-
   --second-bg-color: #171b21;
   --text-color: #ffffffe2;
-
   --main-color: #125296;
   --transition: all 0.4s ease-in;
 }
+
 
 html {
   font-size: 15.5px;
   overflow-x: hidden;
 }
 
+
 body {
   background: var(--bg-color);
   color: var(--text-color);
 }
+
 
 section {
   min-height: 100vh;
   max-width: 100%;
   padding: 7rem 9% 2rem;
 }
+
 
 .header {
   position: fixed;
@@ -48,18 +50,15 @@ section {
   align-items: center;
   z-index: 100;
 }
-
 .header.sticky {
   border-bottom: 0.1rem solid rgba(0, 0, 0, 0.2);
 }
-
 .logo {
   font-size: 3.2rem;
   color: var(--text-color);
   font-weight: 600;
   cursor: default;
 }
-
 .navbar a {
   font-size: 1.3rem;
   color: var(--text-color);
@@ -70,19 +69,16 @@ section {
   -ms-transition: 0.3s ease;
   -o-transition: 0.3s ease;
 }
-
 .navbar a:hover,
 .navbar a.active {
   color: var(--main-color);
 }
-
 #menu-icon {
   color: var(--text-color);
   font-size: 2rem;
   margin-right: 10px;
   display: none;
 }
-
 .home {
   display: flex;
   flex-direction: row;
@@ -123,7 +119,6 @@ section {
     -o-transform: translateY(0);
   }
 }
-
 .home-content {
   margin-top: -10rem;
   width: 90%;
@@ -135,18 +130,15 @@ section {
 .home-content h3:nth-child(1) {
   margin-top: 10rem;
 }
-
 span {
   color: var(--main-color);
 }
-
 .home-content h2 {
   color: var(--main-color);
   font-size: 4rem;
   font-weight: 700;
   line-height: 1.5;
 }
-
 .social-media a {
   display: inline-flex;
   justify-content: center;
@@ -169,13 +161,11 @@ span {
   -ms-transition: 0.3s ease;
   -o-transition: 0.3s ease;
 }
-
 .social-media a:hover {
   background: var(--main-color);
   color: var(--second-bg-color);
   box-shadow: 0 0 1rem var(--main-color);
 }
-
 .btn {
   display: inline-block;
   padding: 0.8rem 2.8rem;
@@ -199,6 +189,7 @@ span {
   box-shadow: none;
 }
 
+
 .about {
   display: flex;
   justify-content: center;
@@ -213,12 +204,10 @@ span {
   padding: 5px;
   animation: glow 2s infinite alternate;
 }
-
 .about-img img {
   width: 20vw;
   border-radius: 50%;
 }
-
 @keyframes glow {
   from {
     box-shadow: 0 0 10px orange, 0 0 10px orange, 0 0 20px orange;
@@ -249,10 +238,22 @@ span {
   margin-bottom: 5rem;
   color: white;
   text-align: center;
+  opacity: 0;
+  transform: translateY(-60px);
+  animation: skillsDrop 1s ease forwards;
 }
-#skills span{
-    color: var(--main-color);
-
+@keyframes skillsDrop {
+  0% {
+    opacity: 0;
+    transform: translateY(-60px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+#skills span {
+  color: var(--main-color);
 }
 .skills-container {
   display: flex;
@@ -261,7 +262,6 @@ span {
   gap: 2rem;
   margin-bottom: 5rem;
 }
-
 .skills-container .skill-box {
   flex: 1 1 calc(33.33% - 2rem);
   justify-items: center;
@@ -272,7 +272,6 @@ span {
   border: 0.2rem solid var(--bg-color);
   transition: 0.5s ease;
 }
-
 .skills-container .skill-box:hover {
   transform: scale(0.9);
   box-shadow: 5px 5px 10px var(--main-color);
@@ -285,21 +284,18 @@ span {
   justify-content: center;
   align-items: center;
   border-radius: 20%;
-  background: rgba(255, 255, 255, 0.1); 
-  border: 2px solid rgba(255, 255, 255, 0.2); 
-  backdrop-filter: blur(10px); 
-  -webkit-backdrop-filter: blur(10px); 
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); 
+  background: rgba(255, 255, 255, 0.1);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
   transition: 0.3s ease;
 }
-
 .skill-badge img {
   width: 50px;
   height: 50px;
   object-fit: contain;
 }
-
-
 .skill-name {
   font-size: 1.2rem;
   margin-top: 1rem;
@@ -307,14 +303,13 @@ span {
   color: var(--text-color);
 }
 
+
 .projects {
   background: var(--second-bg-color);
 }
-
 .projects h2 {
   margin-bottom: 5rem;
 }
-
 .projects-container {
   display: grid;
   height: 450px;
@@ -322,7 +317,6 @@ span {
   align-items: center;
   gap: 1.5rem;
 }
-
 .projects-container .projects-box {
   position: relative;
   width: 100%;
@@ -336,7 +330,6 @@ span {
   overflow: hidden;
   display: flex;
 }
-
 .projects-box img {
   width: 100%;
   transition: 0.5s ease;
@@ -345,7 +338,6 @@ span {
   -ms-transition: 0.5s ease;
   -o-transition: 0.5s ease;
 }
-
 .projects-box:hover img {
   transform: scale(1.1);
   -webkit-transform: scale(1.1);
@@ -353,7 +345,6 @@ span {
   -ms-transform: scale(1.1);
   -o-transform: scale(1.1);
 }
-
 .projects-box .projects-layer {
   position: absolute;
   bottom: 0;
@@ -378,7 +369,6 @@ span {
   -ms-transition: 0.5s ease;
   -o-transition: 0.5s ease;
 }
-
 .projects-box:hover .projects-layer {
   transform: translateY(0);
   -webkit-transform: translateY(0);
@@ -386,16 +376,13 @@ span {
   -ms-transform: translateY(0);
   -o-transform: translateY(0);
 }
-
 .projects-layer h4 {
   font-size: 2.1rem;
 }
-
 .projects-layer p {
   font-size: 1.1rem;
   margin: 0.3rem 0 1rem;
 }
-
 .projects-layer a {
   display: inline-flex;
   justify-content: center;
@@ -415,7 +402,7 @@ span {
 }
 
 
-.contact h2{
+.contact h2 {
   margin-top: 7rem;
 }
 .contact-icons {
@@ -424,7 +411,6 @@ span {
   gap: 40px;
   margin-top: 20px;
 }
-
 .contact-icons a {
   position: relative;
   font-size: 3rem;
@@ -436,11 +422,9 @@ span {
   height: 80px;
   transition: all 0.3s ease;
 }
-
 .contact-icons i {
   transition: opacity 0.3s ease;
 }
-
 .contact-icons .text {
   position: absolute;
   opacity: 0;
@@ -449,22 +433,19 @@ span {
   letter-spacing: 1px;
   transition: opacity 0.3s ease;
 }
-
 .contact-icons a:hover i {
-  opacity: 0; 
+  opacity: 0;
 }
-
 .contact-icons a:hover .text {
   opacity: 1;
 }
-
 .contact-icons a.whatsapp,
 .contact-icons a.whatsapp:hover .text {
-  color: #25D366; 
+  color: #25D366;
 }
 .contact-icons a.gmail,
 .contact-icons a.gmail:hover .text {
-  color: #D44638; 
+  color: #D44638;
 }
 
 
@@ -476,11 +457,9 @@ span {
   padding: 1rem 9%;
   background: var(--second-bg-color);
 }
-
 .footer-text p {
   font-size: 1.1rem;
 }
-
 .footer-iconTop a {
   display: inline-flex;
   justify-content: center;
@@ -498,13 +477,10 @@ span {
   -ms-transition: 0.5s ease;
   -o-transition: 0.5s ease;
 }
-
 .footer-iconTop a:hover {
   box-shadow: 0 0 1rem var(--main-color);
 }
-
 .footer-iconTop a i {
   font-size: 1.5rem;
   color: var(--second-bg-color);
 }
-
